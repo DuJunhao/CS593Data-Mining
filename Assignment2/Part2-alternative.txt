@@ -1,0 +1,50 @@
+//RGET TASKA;
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskA wait=no sysrputsync=yes log="taskA.log" output="taskA.lst";
+libname sasdata "E:\SASDATA\SASdataA" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+//RGET TASKB;
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskB wait=no sysrputsync=yes log="taskB.log" output="taskB.lst";
+libname sasdata "E:\SASDATA\SASdataB" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+//RGET TASKC;
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskC wait=no sysrputsync=yes log="taskC.log" output="taskC.lst";
+libname sasdata "E:\SASDATA\SASdataC" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+//RGET TASKD;
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskD wait=no sysrputsync=yes log="taskD.log" output="taskD.lst";
+libname sasdata "E:\SASDATA\SASdataD" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+
+proc sql;
+create table numerator as select count(*) as numerator from sasdata.spanish_bank_acct where E_account=1 and payroll=1;
+quit;
+
+proc sql;
+create table denom as select count(*) as denom from sasdata.spanish_bank_acct where E_account=1 or payroll=1;
+quit;
+
+.................

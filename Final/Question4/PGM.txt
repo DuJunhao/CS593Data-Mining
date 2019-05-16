@@ -1,0 +1,28 @@
+libname sasdata "E:\SASDATA\";
+
+data heart_attack2;
+set sasdata.heart_attack;
+if Anxiety_Treatment>60 and anger_treatment=1 then v_Anxiety_Treatment=1;
+else v_Anxiety_Treatment=0;
+run;
+
+proc logistic data=heart_attack2 descending outest=betas covout;
+class Anger_Treatment(ref='0') v_Anxiety_Treatment(ref='0')/param=ref;
+model Heart_Attack_2=Anger_Treatment v_Anxiety_Treatment  / selection=backward
+                     slentry=0.3
+                     slstay=0.35
+                     details
+					 expb
+                     lackfit;
+output predicted=v_Anxiety_Treatment  out=pred p=phat lower=lcl upper=ucl
+             predprob=(individual crossvalidate);
+   run;
+quit;
+
+
+  proc print data=betas;
+      title2 'Parameter Estimates and Covariance Matrix';
+   run;
+   proc print data=pred;
+      title2 'Predicted Probabilities and 95% Confidence Limits';
+   run;

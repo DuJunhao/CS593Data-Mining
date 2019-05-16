@@ -1,0 +1,169 @@
+libname sasdataA "E:\SASDATA\SASdataA";
+libname sasdataB "E:\SASDATA\SASdataB";
+libname sasdataC "E:\SASDATA\SASdataC";
+libname sasdataD "E:\SASDATA\SASdataD";
+LIBNAME SASDATA "E:\SASDATA";
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskA wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataA" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskB wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataB" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskC wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataC" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskD wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataD" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+
+proc format;
+value clstfmt
+low -249=A
+250-499=B
+500-749=C
+750-high=D
+;
+run;
+
+data sasdataA.Spanish_Bank_age
+	  sasdataB.Spanish_Bank_age
+	  sasdataC.Spanish_Bank_age
+	  sasdataD.Spanish_Bank_age
+	  empty
+	  ;
+set sasdata.Spanish_bank_student;
+cluster=put(mod(customer_code,997),clstfmt.);
+
+	if cluster='A' then output sasdataA.Spanish_Bank_age;
+else if cluster='B' then output sasdataB.Spanish_Bank_age;
+else if cluster='C' then output sasdataC.Spanish_Bank_age;
+else if cluster='D' then output sasdataD.Spanish_Bank_age;
+else output empty;
+run;
+
+
+rsubmit taskA wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataA";
+proc sql;
+
+  create table wantA1 as
+
+    select mean(age) as mean
+
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+proc sql;
+  create table wantA2 as
+select count(*) 
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+endrsubmit;
+
+rsubmit taskB wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataB";
+proc sql;
+
+  create table wantB1 as
+
+    select mean(age) as mean
+
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+proc sql;
+  create table wantB2 as
+select count(*) 
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+endrsubmit;
+
+rsubmit taskC wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataC";
+proc sql;
+
+  create table wantC1 as
+
+    select mean(age) as mean
+
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+proc sql;
+  create table wantC2 as
+select count(*) 
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+endrsubmit;
+
+rsubmit taskD wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataD";
+proc sql;
+
+  create table wantD1 as
+
+    select mean(age) as mean
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+proc sql;
+  create table wantD2 as
+select count(*) 
+   from sasdata.Spanish_bank_age;
+
+quit;
+proc print;run;
+endrsubmit;
+
+LISTTASK _ALL_;
+rget taskA; *get data from taskB;
+rget taskB;
+rget taskC;
+rget taskD;
+waitfor _all_ taskA taskB taskC taskD;
+*%put &pathtaskA;
+*%put &pathtaskB;
+libname rworkA slibref=work server=taskA; *slibref means server library reference;
+libname rworkB slibref=work server=taskB;
+libname rworkC slibref=work server=taskC;
+libname rworkD slibref=work server=taskD;
+proc sql;
+ create table distance2 as 
+  select (wanta1.mean*wanta2._temg001 + wantb1.mean*wantb2._temg001+wantc1.mean*wantc2._temg001+wantd1.mean*wantd2._temg001)/(wantA2._temg001+wantB2._temg001+wantC2._temg001+wantD2._temg001) as distance
+  from rworkA.wanta1, rworkA.wanta2, rworkB.wantb1, rworkB.wantb2, rworkC.wantc1, rworkC.wantc2, rworkD.wantd1, rworkD.wantd2;
+quit;

@@ -1,0 +1,20 @@
+LIBNAME SASDATA "E:\SASDATA";
+proc copy in=sasdata out=work;
+select Breast_cancer_data;
+run;
+
+PROC STANDARD DATA=Breast_cancer_data MEAN=0 STD=1 OUT=Breast_cancer_data2;
+VAR radius_mean texture_mean perimeter_mean area_mean smoothness_mean compactness_mean concavity_mean concave_points_mean symmetry_mean fractal_dimension_mean;
+run;
+
+
+Title2 "corrolation between variables";
+proc corr data=Breast_cancer_data2 cov;
+var radius_mean texture_mean perimeter_mean area_mean smoothness_mean compactness_mean concavity_mean concave_points_mean symmetry_mean fractal_dimension_mean;
+run;
+
+
+Title "Principal Component Analysis";
+proc princomp data=Breast_cancer_data2;
+var radius_mean texture_mean perimeter_mean area_mean smoothness_mean compactness_mean concavity_mean concave_points_mean symmetry_mean fractal_dimension_mean;
+run;

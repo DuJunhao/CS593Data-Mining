@@ -1,0 +1,38 @@
+*-------------------------------------------------------------------------;
+* Project        :  Distributed File System                                         ;
+* Developer(s)   :  Khasha Dehand                                         ;
+* Comments       :  Distribute SAS data over multiple node                  ;
+*-------------------------------------------------------------------------;
+
+%let prim=997;
+
+proc format;
+  value clstfmt 
+     low   - 249 =A
+     250  - 499   =B
+     500  - 749   =C
+     750 -  high  =D
+  ;
+run;
+LIBNAME SASDATA "E:\SASDATA";
+libname sasdataA "E:\SASDATA\SASdataA";
+libname sasdataB "E:\SASDATA\SASdataB";
+libname sasdataC "E:\SASDATA\SASdataC";
+libname sasdataD "E:\SASDATA\SASdataD";
+data sasdataA.IncomeByZip
+     sasdataB.IncomeByZip 
+     sasdataC.IncomeByZip 
+     sasdataD.IncomeByZip 
+	 empty
+	 ;
+ set sasdata.Income_by_zip_2015
+      ;
+ cluster =put(mod(zipcode,997),clstfmt.);
+  
+        if cluster='A' then output sasdataA.IncomeByZip ;
+   else if cluster='B' then output sasdataB.IncomeByZip ;
+   else if cluster='C' then output sasdataC.IncomeByZip ;
+   else if cluster='D' then output sasdataD.IncomeByZip ;
+   else output empty;
+run;
+

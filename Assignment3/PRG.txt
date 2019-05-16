@@ -1,0 +1,44 @@
+libname sasdataA "E:\SASDATA\SASdataA";
+libname sasdataB "E:\SASDATA\SASdataB";
+libname sasdataC "E:\SASDATA\SASdataC";
+libname sasdataD "E:\SASDATA\SASdataD";
+LIBNAME SASDATA "E:\SASDATA";
+
+proc copy in=sasdata out=work;
+select lung depression;
+run;
+
+proc univariate data=lung normaltest normal plot;
+var fvc_father age_father height_father;
+run;
+
+proc reg data=lung outest=lungest_fvc_f;
+model     fvc_father= age_father height_father/dw dwprob vif stb;
+      OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+  quit;
+
+proc reg data=lung ;
+model fvc_father=age_father;
+model fvc_father=height_father
+model fvc_father=age_father height_father/vif collin;
+run;
+
+proc reg data=depression;
+model cat_total=income;
+model cat_total=sex;
+model cat_total=age;
+model cat_total=income sex age/vif collin;
+run;
+
+
+/*
+selection=forward/ backward /stepwise/ maxr
+*/
+proc reg data=lung;
+model height_oldest_child=age_oldest_child weight_oldest_child  height_father weight_father height_mother weight_mother /dwProb stb selection=foward;
+run;
+
+proc reg data=lung;
+model height_oldest_child=age_oldest_child height_father height_mother /dwProb stb;
+run;

@@ -1,0 +1,9 @@
+libname sasdata "E:\SASDATA";
+
+PROC STANDARD DATA=sasdata.baseball MEAN=0 STD=1 out=baseball_z;
+VAR age games at_bats runs hits doubles triples rbis walks strikeouts bat_ave on_base_pct slugging_pct stolen_bases caught_stealing;
+run;
+
+proc princomp data=baseball_z;
+var age games at_bats runs hits doubles triples rbis walks strikeouts bat_ave on_base_pct slugging_pct stolen_bases caught_stealing;
+run;

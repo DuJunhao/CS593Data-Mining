@@ -1,0 +1,1847 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>SAS Output</TITLE>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001">
+<META content="text/html; charset=windows-1252" http-equiv=Content-type>
+<STYLE type=text/css>.aftercaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; PADDING-TOP: 4pt; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.batch {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: 'SAS Monospace', 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; PADDING-BOTTOM: 7px; FONT-STYLE: normal; PADDING-TOP: 7px; PADDING-LEFT: 7px; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; PADDING-RIGHT: 7px; BACKGROUND-COLOR: #fafbfe
+}
+.beforecaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.body {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.bodydate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bycontentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.byline {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bylinecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.caption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.cell {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.container {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contents {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.contentsdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contenttitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.continued {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.data {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: italic; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataempty {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datafixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrong {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.date {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.document {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #800080
+}
+A:active {
+	COLOR: #800080
+}
+.errorbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.extendedpage {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 1pt solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; TEXT-ALIGN: center; BORDER-LEFT: #000000 1pt solid; BACKGROUND-COLOR: #fafbfe
+}
+.fatalbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.folderaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.footer {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.frame {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.graph {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.header {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headersandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #edf2f9
+}
+.headerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.index {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indexaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indextitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.layoutcontainer {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.layoutregion {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.linecontent {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.list {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.note {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notebanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.output {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.pageno {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; VERTICAL-ALIGN: top; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.pages {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.pagesdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.pagesproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagestitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.paragraph {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.parskip {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; BORDER-SPACING: 0px; BORDER-LEFT: #000000 0px solid
+}
+.prepage {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: left; BACKGROUND-COLOR: #fafbfe
+}
+.proctitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.proctitlefixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier, monospace; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.rowfooter {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheader {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.systemfooter {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter10 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter2 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter3 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter4 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter5 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter6 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter7 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter8 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter9 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle10 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle2 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle3 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle4 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle5 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle6 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle7 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle8 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle9 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systitleandfootercontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.table {
+	BORDER-TOP: #c1c1c1 1px solid; BORDER-RIGHT: #c1c1c1 0px solid; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #c1c1c1 0px solid; BORDER-SPACING: 0px; BORDER-LEFT: #c1c1c1 1px solid
+}
+.top_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; BORDER-LEFT: 0px
+}
+.middle_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.bottom_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.titleandnotecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.titlesandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.usertext {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warnbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.l {
+	TEXT-ALIGN: left
+}
+.c {
+	TEXT-ALIGN: center
+}
+.r {
+	TEXT-ALIGN: right
+}
+.d {
+	TEXT-ALIGN: right
+}
+.j {
+	TEXT-ALIGN: justify
+}
+.t {
+	VERTICAL-ALIGN: top
+}
+.m {
+	VERTICAL-ALIGN: middle
+}
+.b {
+	VERTICAL-ALIGN: bottom
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+TH {
+	VERTICAL-ALIGN: top
+}
+.stacked_cell {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+</STYLE>
+
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY class=body onload=startup() onunload=shutdown()>
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</SCRIPT>
+
+<DIV class=branch><A name=IDX></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The REG Procedure</DIV>
+<DIV class="c proctitle">Model: MODEL1</DIV>
+<DIV class="c proctitle">Dependent Variable: Cat_total </DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Reg: Number of Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Observations Read</TH>
+    <TD class="r data">294</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Observations Used</TH>
+    <TD class="r data">294</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX1></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Reg: Analysis of Variance" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=6 scope=colgroup>Analysis of Variance</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Source</TH>
+    <TH class="r b header" scope=col>DF</TH>
+    <TH class="r b header" scope=col>Sum of<BR>Squares</TH>
+    <TH class="r b header" scope=col>Mean<BR>Square</TH>
+    <TH class="r b header" scope=col>F Value</TH>
+    <TH class="r b header" scope=col>Pr&nbsp;&gt;&nbsp;F</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Model</TH>
+    <TD class="r data">3</TD>
+    <TD class="r data">1686.62825</TD>
+    <TD class="r data">562.20942</TD>
+    <TD class="r data">7.72</TD>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Error</TH>
+    <TD class="r data">290</TD>
+    <TD class="r data">21125</TD>
+    <TD class="r data">72.84634</TD>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Corrected Total</TH>
+    <TD class="r data">293</TD>
+    <TD class="r data">22812</TD>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">&nbsp;</TD>
+    <TD class="r data">&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX2></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Reg: Fit Statistics" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Root MSE</TH>
+    <TD class="r data">8.53501</TD>
+    <TH class="l rowheader" scope=row>R-Square</TH>
+    <TD class="r data">0.0739</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Dependent Mean</TH>
+    <TD class="r data">8.88435</TD>
+    <TH class="l rowheader" scope=row>Adj R-Sq</TH>
+    <TD class="r data">0.0644</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Var</TH>
+    <TD class="r data">96.06784</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX3></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Reg: Parameter Estimates" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=7 scope=colgroup>Parameter Estimates</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Variable</TH>
+    <TH class="r b header" scope=col>DF</TH>
+    <TH class="r b header" scope=col>Parameter<BR>Estimate</TH>
+    <TH class="r b header" scope=col>Standard<BR>Error</TH>
+    <TH class="r b header" scope=col>t&nbsp;Value</TH>
+    <TH class="r b header" scope=col>Pr&nbsp;&gt;&nbsp;|t|</TH>
+    <TH class="r b header" scope=col>Variance<BR>Inflation</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Intercept</TH>
+    <TH class="r data">1</TH>
+    <TD class="r data">12.44897</TD>
+    <TD class="r data">2.41928</TD>
+    <TD class="r data">5.15</TD>
+    <TD class="r data">&lt;.0001</TD>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>INCOME</TH>
+    <TH class="r data">1</TH>
+    <TD class="r data" noWrap>-0.10321</TD>
+    <TD class="r data">0.03375</TD>
+    <TD class="r data" noWrap>-3.06</TD>
+    <TD class="r data">0.0024</TD>
+    <TD class="r data">1.07108</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>SEX</TH>
+    <TH class="r data">1</TH>
+    <TD class="r data">1.82034</TD>
+    <TD class="r data">1.04396</TD>
+    <TD class="r data">1.74</TD>
+    <TD class="r data">0.0823</TD>
+    <TD class="r data">1.03368</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>AGE</TH>
+    <TH class="r data">1</TH>
+    <TD class="r data" noWrap>-0.09894</TD>
+    <TD class="r data">0.02809</TD>
+    <TD class="r data" noWrap>-3.52</TD>
+    <TD class="r data">0.0005</TD>
+    <TD class="r data">1.03824</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX4></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Reg: Collinearity Diagnostics" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=7 scope=colgroup>Collinearity 
+  Diagnostics</TH></TR>
+  <TR>
+    <TH class="r b header" rowSpan=2 scope=col>Number</TH>
+    <TH class="r b header" rowSpan=2 scope=col>Eigenvalue</TH>
+    <TH class="r b header" rowSpan=2 scope=col>Condition<BR>Index</TH>
+    <TH class="c b header" colSpan=4 scope=colgroup>Proportion of 
+  Variation</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Intercept</TH>
+    <TH class="r b header" scope=col>INCOME</TH>
+    <TH class="r b header" scope=col>SEX</TH>
+    <TH class="r b header" scope=col>AGE</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>1</TH>
+    <TD class="r data">3.51828</TD>
+    <TD class="r data">1.00000</TD>
+    <TD class="r data">0.00332</TD>
+    <TD class="r data">0.01973</TD>
+    <TD class="r data">0.00591</TD>
+    <TD class="r data">0.00979</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>2</TH>
+    <TD class="r data">0.34385</TD>
+    <TD class="r data">3.19875</TD>
+    <TD class="r data">0.00195</TD>
+    <TD class="r data">0.73294</TD>
+    <TD class="r data">0.01651</TD>
+    <TD class="r data">0.06046</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>3</TH>
+    <TD class="r data">0.10861</TD>
+    <TD class="r data">5.69160</TD>
+    <TD class="r data">0.01089</TD>
+    <TD class="r data">0.03499</TD>
+    <TD class="r data">0.30512</TD>
+    <TD class="r data">0.68245</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>4</TH>
+    <TD class="r data">0.02926</TD>
+    <TD class="r data">10.96485</TD>
+    <TD class="r data">0.98384</TD>
+    <TD class="r data">0.21234</TD>
+    <TD class="r data">0.67246</TD>
+    <TD class="r data">0.24730</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX5></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The REG Procedure</DIV>
+<DIV class="c proctitle">Model: MODEL1</DIV>
+<DIV class="c proctitle">Dependent Variable: Cat_total </DIV>
+<P>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Panel of fit diagnostics for Cat_total." 
+src="SAS%20Output_htm%23IDX34_files/DiagnosticsPanel.png"> </DIV></DIV><BR><A 
+name=IDX6></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 480px; WIDTH: 640px" border=0 
+alt="Panel of scatterplots of residuals by regressors for Cat_total." 
+src="SAS%20Output_htm%23IDX34_files/ResidualPlot.png"> </DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX7></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Variable: Cat_total</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Moments" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Moments</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>N</TH>
+    <TD class="r data">294</TD>
+    <TH class="l rowheader" scope=row>Sum Weights</TH>
+    <TD class="r data">294</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">8.88435374</TD>
+    <TH class="l rowheader" scope=row>Sum Observations</TH>
+    <TD class="r data">2612</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">8.82365499</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">77.8568875</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Skewness</TH>
+    <TD class="r data">1.69419133</TD>
+    <TH class="l rowheader" scope=row>Kurtosis</TH>
+    <TD class="r data">3.23049566</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Uncorrected SS</TH>
+    <TD class="r data">46018</TD>
+    <TH class="l rowheader" scope=row>Corrected SS</TH>
+    <TD class="r data">22812.068</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Variation</TH>
+    <TD class="r data">99.3167905</TD>
+    <TH class="l rowheader" scope=row>Std Error Mean</TH>
+    <TD class="r data">0.51460601</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX8></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Basic Measures of Location and Variability" 
+frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Basic Statistical 
+    Measures</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Location</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Variability</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">8.884354</TD>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">8.82365</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Median</TH>
+    <TD class="r data">7.000000</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">77.85689</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mode</TH>
+    <TD class="r data">0.000000</TD>
+    <TH class="l rowheader" scope=row>Range</TH>
+    <TD class="r data">47.00000</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Interquartile Range</TH>
+    <TD class="r data">9.00000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX9></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Location" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 
+      scope=colgroup>Tests&nbsp;for&nbsp;Location:&nbsp;Mu0=0</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Student's t</TH>
+    <TH class="l rowheader" scope=row>t</TH>
+    <TD class="r data">17.26438</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; |t|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Sign</TH>
+    <TH class="l rowheader" scope=row>M</TH>
+    <TD class="r data">130</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |M|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Signed Rank</TH>
+    <TH class="l rowheader" scope=row>S</TH>
+    <TD class="r data">16965</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |S|</TH>
+    <TD class="r data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX10></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Normality" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Tests for Normality</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Shapiro-Wilk</TH>
+    <TH class="l rowheader" scope=row>W</TH>
+    <TD class="r data">0.835849</TD>
+    <TH class="l rowheader" scope=row>Pr &lt; W</TH>
+    <TD class="r data">&lt;0.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.158037</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.0100</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">2.061275</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">12.55826</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX11></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 
+      scope=colgroup>Quantiles&nbsp;(Definition&nbsp;5)</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Level</TH>
+    <TH class="r b header" scope=col>Quantile</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>100% Max</TH>
+    <TD class="r data">47</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>99%</TH>
+    <TD class="r data">42</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>95%</TH>
+    <TD class="r data">28</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>90%</TH>
+    <TD class="r data">21</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>75% Q3</TH>
+    <TD class="r data">12</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>50% Median</TH>
+    <TD class="r data">7</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>25% Q1</TH>
+    <TD class="r data">3</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>10%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>5%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>1%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>0% Min</TH>
+    <TD class="r data">0</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=IDX12></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Extreme Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Extreme Observations</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Lowest</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Highest</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">290</TD>
+    <TD class="r data">39</TD>
+    <TD class="r data">189</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">284</TD>
+    <TD class="r data">40</TD>
+    <TD class="r data">58</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">281</TD>
+    <TD class="r data">42</TD>
+    <TD class="r data">17</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">280</TD>
+    <TD class="r data">42</TD>
+    <TD class="r data">73</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">277</TD>
+    <TD class="r data">47</TD>
+    <TD class="r data">289</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX13></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Plots for Cat_total" src="SAS%20Output_htm%23IDX34_files/Plots.png"> 
+</DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX14></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Variable: INCOME</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Moments" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Moments</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>N</TH>
+    <TD class="r data">294</TD>
+    <TH class="l rowheader" scope=row>Sum Weights</TH>
+    <TD class="r data">294</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">20.5748299</TD>
+    <TH class="l rowheader" scope=row>Sum Observations</TH>
+    <TD class="r data">6049</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">15.2901242</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">233.787897</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Skewness</TH>
+    <TD class="r data">1.22304676</TD>
+    <TH class="l rowheader" scope=row>Kurtosis</TH>
+    <TD class="r data">0.95630444</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Uncorrected SS</TH>
+    <TD class="r data">192957</TD>
+    <TH class="l rowheader" scope=row>Corrected SS</TH>
+    <TD class="r data">68499.8537</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Variation</TH>
+    <TD class="r data">74.3147049</TD>
+    <TH class="l rowheader" scope=row>Std Error Mean</TH>
+    <TD class="r data">0.89173815</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX15></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Basic Measures of Location and Variability" 
+frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Basic Statistical 
+    Measures</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Location</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Variability</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">20.57483</TD>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">15.29012</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Median</TH>
+    <TD class="r data">15.00000</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">233.78790</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mode</TH>
+    <TD class="r data">19.00000</TD>
+    <TH class="l rowheader" scope=row>Range</TH>
+    <TD class="r data">63.00000</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Interquartile Range</TH>
+    <TD class="r data">19.00000</TD></TR></TBODY></TABLE></DIV><BR>
+<P>
+<DIV align=center>
+<TABLE class=proctitle>
+  <TBODY>
+  <TR>
+    <TD class="c proctitle">Note: The mode displayed is the smallest of 2 
+      modes with a count of 25.</TD></TR></TBODY></TABLE></DIV>
+<P></P></DIV><BR><A name=IDX16></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Location" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 
+      scope=colgroup>Tests&nbsp;for&nbsp;Location:&nbsp;Mu0=0</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Student's t</TH>
+    <TH class="l rowheader" scope=row>t</TH>
+    <TD class="r data">23.07273</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; |t|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Sign</TH>
+    <TH class="l rowheader" scope=row>M</TH>
+    <TD class="r data">147</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |M|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Signed Rank</TH>
+    <TH class="l rowheader" scope=row>S</TH>
+    <TD class="r data">21682.5</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |S|</TH>
+    <TD class="r data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX17></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Normality" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Tests for Normality</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Shapiro-Wilk</TH>
+    <TH class="l rowheader" scope=row>W</TH>
+    <TD class="r data">0.871775</TD>
+    <TH class="l rowheader" scope=row>Pr &lt; W</TH>
+    <TD class="r data">&lt;0.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.159303</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.0100</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">1.826333</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">11.31895</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX18></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 
+      scope=colgroup>Quantiles&nbsp;(Definition&nbsp;5)</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Level</TH>
+    <TH class="r b header" scope=col>Quantile</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>100% Max</TH>
+    <TD class="r data">65</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>99%</TH>
+    <TD class="r data">65</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>95%</TH>
+    <TD class="r data">55</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>90%</TH>
+    <TD class="r data">45</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>75% Q3</TH>
+    <TD class="r data">28</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>50% Median</TH>
+    <TD class="r data">15</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>25% Q1</TH>
+    <TD class="r data">9</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>10%</TH>
+    <TD class="r data">6</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>5%</TH>
+    <TD class="r data">4</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>1%</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>0% Min</TH>
+    <TD class="r data">2</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=IDX19></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Extreme Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Extreme Observations</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Lowest</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Highest</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">2</TD>
+    <TD class="r data">256</TD>
+    <TD class="r data">65</TD>
+    <TD class="r data">166</TD></TR>
+  <TR>
+    <TD class="r data">2</TD>
+    <TD class="r data">193</TD>
+    <TD class="r data">65</TD>
+    <TD class="r data">222</TD></TR>
+  <TR>
+    <TD class="r data">2</TD>
+    <TD class="r data">140</TD>
+    <TD class="r data">65</TD>
+    <TD class="r data">223</TD></TR>
+  <TR>
+    <TD class="r data">2</TD>
+    <TD class="r data">124</TD>
+    <TD class="r data">65</TD>
+    <TD class="r data">234</TD></TR>
+  <TR>
+    <TD class="r data">2</TD>
+    <TD class="r data">114</TD>
+    <TD class="r data">65</TD>
+    <TD class="r data">270</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX20></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Plots for INCOME" src="SAS%20Output_htm%23IDX34_files/Plots1.png"> 
+</DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX21></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Variable: SEX</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Moments" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Moments</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>N</TH>
+    <TD class="r data">294</TD>
+    <TH class="l rowheader" scope=row>Sum Weights</TH>
+    <TD class="r data">294</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">1.62244898</TD>
+    <TH class="l rowheader" scope=row>Sum Observations</TH>
+    <TD class="r data">477</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">0.48560098</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">0.23580832</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Skewness</TH>
+    <TD class="r data" noWrap>-0.5077736</TD>
+    <TH class="l rowheader" scope=row>Kurtosis</TH>
+    <TD class="r data" noWrap>-1.7541457</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Uncorrected SS</TH>
+    <TD class="r data">843</TD>
+    <TH class="l rowheader" scope=row>Corrected SS</TH>
+    <TD class="r data">69.0918367</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Variation</TH>
+    <TD class="r data">29.9301236</TD>
+    <TH class="l rowheader" scope=row>Std Error Mean</TH>
+    <TD class="r data">0.02832082</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX22></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Basic Measures of Location and Variability" 
+frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Basic Statistical 
+    Measures</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Location</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Variability</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">1.622449</TD>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">0.48560</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Median</TH>
+    <TD class="r data">2.000000</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">0.23581</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mode</TH>
+    <TD class="r data">2.000000</TD>
+    <TH class="l rowheader" scope=row>Range</TH>
+    <TD class="r data">1.00000</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Interquartile Range</TH>
+    <TD class="r data">1.00000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX23></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Location" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 
+      scope=colgroup>Tests&nbsp;for&nbsp;Location:&nbsp;Mu0=0</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Student's t</TH>
+    <TH class="l rowheader" scope=row>t</TH>
+    <TD class="r data">57.2882</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; |t|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Sign</TH>
+    <TH class="l rowheader" scope=row>M</TH>
+    <TD class="r data">147</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |M|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Signed Rank</TH>
+    <TH class="l rowheader" scope=row>S</TH>
+    <TD class="r data">21682.5</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |S|</TH>
+    <TD class="r data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX24></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Normality" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Tests for Normality</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Shapiro-Wilk</TH>
+    <TH class="l rowheader" scope=row>W</TH>
+    <TD class="r data">0.614297</TD>
+    <TH class="l rowheader" scope=row>Pr &lt; W</TH>
+    <TD class="r data">&lt;0.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.404015</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.0100</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">9.678379</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">56.89633</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX25></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 
+      scope=colgroup>Quantiles&nbsp;(Definition&nbsp;5)</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Level</TH>
+    <TH class="r b header" scope=col>Quantile</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>100% Max</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>99%</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>95%</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>90%</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>75% Q3</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>50% Median</TH>
+    <TD class="r data">2</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>25% Q1</TH>
+    <TD class="r data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>10%</TH>
+    <TD class="r data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>5%</TH>
+    <TD class="r data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>1%</TH>
+    <TD class="r data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>0% Min</TH>
+    <TD class="r data">1</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=IDX26></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Extreme Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Extreme Observations</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Lowest</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Highest</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">1</TD>
+    <TD class="r data">293</TD>
+    <TD class="r data">2</TD>
+    <TD class="r data">283</TD></TR>
+  <TR>
+    <TD class="r data">1</TD>
+    <TD class="r data">292</TD>
+    <TD class="r data">2</TD>
+    <TD class="r data">284</TD></TR>
+  <TR>
+    <TD class="r data">1</TD>
+    <TD class="r data">291</TD>
+    <TD class="r data">2</TD>
+    <TD class="r data">286</TD></TR>
+  <TR>
+    <TD class="r data">1</TD>
+    <TD class="r data">290</TD>
+    <TD class="r data">2</TD>
+    <TD class="r data">289</TD></TR>
+  <TR>
+    <TD class="r data">1</TD>
+    <TD class="r data">288</TD>
+    <TD class="r data">2</TD>
+    <TD class="r data">294</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX27></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Plots for SEX" src="SAS%20Output_htm%23IDX34_files/Plots2.png"> 
+</DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX28></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Variable: AGE</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Moments" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Moments</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>N</TH>
+    <TD class="r data">294</TD>
+    <TH class="l rowheader" scope=row>Sum Weights</TH>
+    <TD class="r data">294</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">44.414966</TD>
+    <TH class="l rowheader" scope=row>Sum Observations</TH>
+    <TD class="r data">13058</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">18.0854413</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">327.083188</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Skewness</TH>
+    <TD class="r data">0.3610441</TD>
+    <TH class="l rowheader" scope=row>Kurtosis</TH>
+    <TD class="r data" noWrap>-0.9450191</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Uncorrected SS</TH>
+    <TD class="r data">675806</TD>
+    <TH class="l rowheader" scope=row>Corrected SS</TH>
+    <TD class="r data">95835.3741</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Variation</TH>
+    <TD class="r data">40.7192507</TD>
+    <TH class="l rowheader" scope=row>Std Error Mean</TH>
+    <TD class="r data">1.05476436</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX29></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Basic Measures of Location and Variability" 
+frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Basic Statistical 
+    Measures</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Location</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Variability</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">44.41497</TD>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">18.08544</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Median</TH>
+    <TD class="r data">42.50000</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">327.08319</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mode</TH>
+    <TD class="r data">23.00000</TD>
+    <TH class="l rowheader" scope=row>Range</TH>
+    <TD class="r data">71.00000</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Interquartile Range</TH>
+    <TD class="r data">31.00000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX30></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Location" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 
+      scope=colgroup>Tests&nbsp;for&nbsp;Location:&nbsp;Mu0=0</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Student's t</TH>
+    <TH class="l rowheader" scope=row>t</TH>
+    <TD class="r data">42.1089</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; |t|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Sign</TH>
+    <TH class="l rowheader" scope=row>M</TH>
+    <TD class="r data">147</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |M|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Signed Rank</TH>
+    <TH class="l rowheader" scope=row>S</TH>
+    <TD class="r data">21682.5</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |S|</TH>
+    <TD class="r data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX31></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Normality" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Tests for Normality</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Shapiro-Wilk</TH>
+    <TH class="l rowheader" scope=row>W</TH>
+    <TD class="r data">0.948748</TD>
+    <TH class="l rowheader" scope=row>Pr &lt; W</TH>
+    <TD class="r data">&lt;0.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.105405</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.0100</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">0.666592</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">4.329556</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX32></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 
+      scope=colgroup>Quantiles&nbsp;(Definition&nbsp;5)</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Level</TH>
+    <TH class="r b header" scope=col>Quantile</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>100% Max</TH>
+    <TD class="r data">89.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>99%</TH>
+    <TD class="r data">83.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>95%</TH>
+    <TD class="r data">77.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>90%</TH>
+    <TD class="r data">70.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>75% Q3</TH>
+    <TD class="r data">59.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>50% Median</TH>
+    <TD class="r data">42.5</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>25% Q1</TH>
+    <TD class="r data">28.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>10%</TH>
+    <TD class="r data">22.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>5%</TH>
+    <TD class="r data">20.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>1%</TH>
+    <TD class="r data">18.0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>0% Min</TH>
+    <TD class="r data">18.0</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX33></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Extreme Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Extreme Observations</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Lowest</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Highest</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">18</TD>
+    <TD class="r data">221</TD>
+    <TD class="r data">83</TD>
+    <TD class="r data">122</TD></TR>
+  <TR>
+    <TD class="r data">18</TD>
+    <TD class="r data">196</TD>
+    <TD class="r data">83</TD>
+    <TD class="r data">185</TD></TR>
+  <TR>
+    <TD class="r data">18</TD>
+    <TD class="r data">191</TD>
+    <TD class="r data">83</TD>
+    <TD class="r data">252</TD></TR>
+  <TR>
+    <TD class="r data">18</TD>
+    <TD class="r data">124</TD>
+    <TD class="r data">83</TD>
+    <TD class="r data">284</TD></TR>
+  <TR>
+    <TD class="r data">18</TD>
+    <TD class="r data">110</TD>
+    <TD class="r data">89</TD>
+    <TD class="r data">227</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX34></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Plots for AGE" src="SAS%20Output_htm%23IDX34_files/Plots3.png"> 
+</DIV></DIV><BR></DIV></BODY></HTML>

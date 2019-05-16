@@ -1,0 +1,10 @@
+libname sasdata "E:\SASDATA\";
+
+proc copy in=Sasdata out=work;
+select cereal_ds;
+run;
+
+title "Simple Regression for the cereal dataset";
+proc reg data=cereal_ds;
+model rating=sodium /std vif;
+quit;

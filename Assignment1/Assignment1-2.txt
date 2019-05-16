@@ -1,0 +1,22 @@
+Title "Principal Component Analysis";
+Title2 "corrolation between variables";
+proc corr data=sasdata.Depression cov;
+var DRINK HEALTH REG_DOC TREATED BEDDAYS ACUTE_ILLNESS CHRON_ILLNESS;
+run;
+
+
+
+*******Normalize the data************
+proc standard data=data=sasdata.Depression
+mean=0 std=1
+out=Depression_z;
+var DRINK HEALTH REG_DOC TREATED BEDDAYS ACUTE_ILLNESS CHRON_ILLNESS;
+run;
+
+proc princomp  data=Depression_z out=depression_pca;
+var DRINK HEALTH REG_DOC TREATED BEDDAYS ACUTE_ILLNESS CHRON_ILLNESS;
+run;
+
+proc corr data=depression_pca;
+var prin1-prin7;
+run;

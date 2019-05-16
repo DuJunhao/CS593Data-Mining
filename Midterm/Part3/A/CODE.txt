@@ -1,0 +1,19 @@
+libname sasdata "E:\SASDATA";
+
+title " Multiple regression for depression";
+proc reg data=sasdata.depression  outest=est_depression ;
+     model     cat_total =  income sex age/dw dwprob vif stb;
+      OUTPUT OUT=reg_depressionOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit
+         ;  
+    
+  quit;
+
+proc reg data=sasdata.depression plots(label)=(CooksD RStudentByLeverage DFFITS DFBETAS);
+model cat_total=age income sex /dwProb stb influence;
+run;
+
+title 'Normal Probability-Probability Plot ';
+proc capability data=sasdata.depression noprint;
+   ppplot income sex age;
+run;

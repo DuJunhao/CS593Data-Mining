@@ -1,0 +1,16 @@
+libname sasdata "E:\SASDATA\";
+
+proc copy in=Sasdata out=work;
+select Lung;
+run;
+
+title "Multiple Regression for the cereal dataset";
+proc reg data=Lung;
+model Height_oldest_child=Age_oldest_child Weight_oldest_child Height_mother Weight_mother Height_father Weight_father/dwProb stb selection=forward   ;
+quit;
+
+model Height_oldest_child=Age_oldest_child Weight_oldest_child Height_mother Weight_mother Height_father Weight_father/dwProb stb selection=backward   ;
+quit;
+
+model Height_oldest_child=Age_oldest_child Weight_oldest_child Height_mother Weight_mother Height_father Weight_father/dwProb stb selection=stepwise   ;
+quit;

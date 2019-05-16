@@ -1,0 +1,197 @@
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskA wait=no sysrputsync=yes log="taskA.log" output="taskA.lst";
+libname sasdata "E:\SASDATA\SASdataA" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskB wait=no sysrputsync=yes log="taskB.log" output="taskB.lst";
+libname sasdata "E:\SASDATA\SASdataB" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskC wait=no sysrputsync=yes log="taskC.log" output="taskC.lst";
+libname sasdata "E:\SASDATA\SASdataC" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+option autosignon=yes;
+option sascmd="!sascmd";
+rsubmit taskD wait=no sysrputsync=yes log="taskD.log" output="taskD.lst";
+libname sasdata "E:\SASDATA\SASdataD" ;
+
+endrsubmit;
+
+RDISPLAY;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rsubmit taskA wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataA";
+    DATA sasdataa1 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Direct_Debit) ;
+	output;
+run;
+    DATA sasdataa2 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Payroll) ;
+	output;
+run;
+proc distance data=work.sasdataa1 method=djaccard absent=0 out=distjaccA1;
+      var ANOMINAL(E_account--Direct_Debit /);
+   run;
+   proc distance data=work.sasdataa2 method=djaccard absent=0 out=distjaccA2;
+      var ANOMINAL(E_account--Payroll /);
+   run;
+       DATA distjaccA2NEW ;
+	set work.distjaccA2(keep=dist1) ;
+	output;
+run;
+proc delete data=work.distjaccA2;
+run;
+    DATA distjaccA1NEW ;
+	set work.distjaccA1(keep=dist1 ) ;
+	output;
+run;
+proc delete data=work.distjaccA1;
+run;
+endrsubmit;
+
+
+
+
+
+rsubmit taskB wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataB";
+    DATA sasdatab1 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Direct_Debit) ;
+	output;
+run;
+    DATA sasdatab2 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Payroll) ;
+	output;
+run;
+proc distance data=work.sasdatab1 method=djaccard absent=0 out=distjaccB1;
+      var ANOMINAL(E_account--Direct_Debit /);
+   run;
+   proc distance data=work.sasdatab2 method=djaccard absent=0 out=distjaccB2;
+      var ANOMINAL(E_account--Payroll /);
+   run;
+       DATA distjaccB2NEW ;
+	set work.distjaccB2(keep=dist1) ;
+	output;
+run;
+proc delete data=work.distjaccB2;
+run;
+    DATA distjaccB1NEW ;
+	set work.distjaccB1(keep=dist1 ) ;
+	output;
+run;
+proc delete data=work.distjaccB1;
+run;
+endrsubmit;
+
+
+
+
+
+rsubmit taskC wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataC";
+    DATA sasdatac1 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Direct_Debit) ;
+	output;
+run;
+    DATA sasdatac2 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Payroll) ;
+	output;
+run;
+proc distance data=work.sasdatac1 method=djaccard absent=0 out=distjaccC1;
+      var ANOMINAL(E_account--Direct_Debit /);
+   run;
+   proc distance data=work.sasdatac2 method=djaccard absent=0 out=distjaccC2;
+      var ANOMINAL(E_account--Payroll /);
+   run;
+       DATA distjaccC2NEW ;
+	set work.distjaccC2(keep=dist1) ;
+	output;
+run;
+proc delete data=work.distjaccC2;
+run;
+    DATA distjaccC1NEW ;
+	set work.distjaccC1(keep=dist1 ) ;
+	output;
+run;
+proc delete data=work.distjaccC1;
+run;
+endrsubmit;
+
+
+
+
+
+
+
+
+rsubmit taskD wait=no sysrputsync=yes;
+libname sasdata "E:\SASDATA\SASdataD";
+    DATA sasdatad1 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Direct_Debit) ;
+	output;
+run;
+    DATA sasdatad2 ;
+	set sasdata.Spanish_Bank_acct(keep=customer_code E_account Payroll) ;
+	output;
+run;
+proc distance data=work.sasdatad1 method=djaccard absent=0 out=distjaccD1;
+      var ANOMINAL(E_account--Direct_Debit /);
+   run;
+   proc distance data=work.sasdatad2 method=djaccard absent=0 out=distjaccD2;
+      var ANOMINAL(E_account--Payroll /);
+   run;
+       DATA distjaccD2NEW ;
+	set work.distjaccD2(keep=dist1) ;
+	output;
+run;
+proc delete data=work.distjaccD2;
+run;
+    DATA distjaccD1NEW ;
+	set work.distjaccD1(keep=dist1 ) ;
+	output;
+run;
+proc delete data=work.distjaccD1;
+run;
+endrsubmit;
+
+
+
+

@@ -1,0 +1,32 @@
+LIBNAME SASDATA "E:\SASDATA";
+proc copy in=sasdata out=work;
+ select spanish_bank_student_acct;
+run;
+proc format;
+value clstfmt
+low -249=A
+259-499=B
+500-749=C
+750-high=D
+;
+run;
+libname sasdataA "E:\SASDATA\SASdataA";
+libname sasdataB "E:\SASDATA\SASdataB";
+libname sasdataC "E:\SASDATA\SASdataC";
+libname sasdataD "E:\SASDATA\SASdataD";
+
+data sasdataA.Spanish_Bank_acct
+	  sasdataB.Spanish_Bank_acct
+	  sasdataC.Spanish_Bank_acct
+	  sasdataD.Spanish_Bank_acct
+	  empty
+	  ;
+set sasdata.Spanish_bank_student_acct;
+cluster=put(mod(Customer_code,997),clstfmt.);
+
+	if cluster='A' then output sasdataA.Spanish_Bank_acct;
+else if cluster='B' then output sasdataB.Spanish_Bank_acct;
+else if cluster='C' then output sasdataC.Spanish_Bank_acct;
+else if cluster='D' then output sasdataD.Spanish_Bank_acct;
+else output empty;
+run;

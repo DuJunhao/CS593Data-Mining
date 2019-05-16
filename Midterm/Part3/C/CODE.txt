@@ -1,0 +1,29 @@
+libname sasdata "E:\SASDATA";
+
+proc copy in=sasdata out=work;
+select depression;
+run;
+
+
+data depression;
+set depression  nobs=count;
+if _n_=49  then delete;
+if _n_=292  then delete;
+if _n_=227  then delete;
+if _n_=168  then delete;
+if _n_=103  then delete;
+if _n_=270  then delete;
+if _n_=166  then delete;
+if _n_=77  then delete;
+if _n_=162  then delete;
+if _n_=223  then delete;
+if _n_=95  then delete;
+if _n_=234  then delete;
+if _n_=222  then delete;
+if _n_=121  then delete;
+if _n_=43 then delete;
+run;
+
+proc reg data=depression;
+model cat_total=age income sex /dwProb stb ;
+run;
