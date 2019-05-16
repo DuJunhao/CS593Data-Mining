@@ -1,0 +1,28 @@
+solo_KillDeathRatio
+solo_RoundsPlayed
+solo_Wins
+solo_DamagePg		//inter small
+solo_HeadshotKillsPg
+solo_HealsPg
+solo_KillsPg
+solo_MoveDistancePg //inter small
+solo_RoadKillsPg
+solo_TimeSurvivedPg//inter small
+solo_Kills //remove
+
+solo_HeadshotKills //inter a little small
+solo_HeadshotKillRatio
+solo_VehicleDestroys
+solo_RoadKills
+solo_DailyKills//inter a little small
+solo_WeeklyKills//inter a little small
+solo_RoundMostKills
+solo_Days//inter a little small
+solo_LongestTimeSurvived//inter small
+solo_AvgSurvivalTime //inter small
+solo_WinPoints//inter small
+solo_RideDistance//inter small
+solo_LongestKill//inter small
+solo_Heals//inter small
+solo_DamageDealt//inter small
+solo_Boosts//inter small

@@ -1,0 +1,122 @@
+PROC IMPORT OUT= WORK.PUBG 
+            DATAFILE= "E:\universityGraduate\CS593\Assignments\Presentat
+ion\PUBG_Player_Statistics.csv" 
+            DBMS=CSV REPLACE;
+     GETNAMES=YES;
+     DATAROW=2; 
+RUN;
+
+
+data pubg_solo;
+set PUBG(keep=solo_KillDeathRatio solo_WinRatio solo_TimeSurvived solo_RoundsPlayed solo_Wins solo_WinTop10Ratio solo_Top10s solo_Top10Ratio solo_Losses solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Top10sPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs);
+output;
+run;
+
+
+/*remove the game rounds below 30 */
+data pubg_solo_roundsOver30;
+set pubg_solo;
+if solo_roundsplayed<=30 then delete;
+run;
+
+Title2 "corrolation between variables";
+proc corr data=pubg_solo_roundsOver30 cov  nomiss ;
+var solo_KillDeathRatio  solo_TimeSurvived solo_RoundsPlayed solo_Wins solo_WinTop10Ratio solo_Top10s solo_Top10Ratio solo_Losses solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Top10sPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs ;
+run;
+
+
+Title "Principal Component Analysis";
+proc standard data=pubg_solo_roundsOver30
+mean=0 std=1
+out=pubg_solo_Normal;
+var solo_KillDeathRatio  solo_TimeSurvived solo_RoundsPlayed solo_Wins solo_WinTop10Ratio solo_Top10s solo_Top10Ratio solo_Losses solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Top10sPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs;
+run;
+
+
+/*we take the solo_WinRatio as the dependent variable */
+proc reg data=pubg_solo_roundsOver30;
+model solo_WinRatio=solo_KillDeathRatio solo_TimeSurvived  solo_WinTop10Ratio solo_Top10s solo_Top10Ratio  solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Top10sPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+
+/*we take the top10 ratio out  */
+proc reg data=pubg_solo_Normal;
+model solo_WinRatio=solo_KillDeathRatio solo_TimeSurvived      solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Top10sPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+
+
+/*we take the insignificant variables out  */
+proc reg data=pubg_solo_Normal plots(maxpoints=60000);
+model solo_WinRatio=solo_KillDeathRatio  solo_HeadshotKillsPg solo_HealsPg solo_KillsPg
+ solo_RoadKillsPg  solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_RoundMostKills	/dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+
+
+/*we take the solo_WinTop10Ratio as dependent variable  */
+proc reg data=pubg_solo_Normal;
+model solo_WinTop10Ratio=solo_KillDeathRatio solo_TimeSurvived      solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg  solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+
+
+/*we take the solo_Top10s as dependent variable  */
+proc reg data=pubg_solo_Normal;
+model solo_Top10s=solo_KillDeathRatio solo_TimeSurvived      solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg  solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+/*we take the solo_Top10Ratio as dependent variable  */
+proc reg data=pubg_solo_Normal;
+model solo_Top10Ratio=solo_KillDeathRatio solo_TimeSurvived      solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg  solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
+
+/*we take the solo_Top10sPg= as dependent variable  */
+proc reg data=pubg_solo_Normal;
+model solo_Top10sPg=solo_KillDeathRatio solo_TimeSurvived      solo_Rating solo_BestRating 
+solo_DamagePg solo_HeadshotKillsPg solo_HealsPg solo_KillsPg solo_MoveDistancePg solo_RevivesPg solo_RoadKillsPg solo_TeamKillsPg solo_TimeSurvivedPg solo_Kills
+solo_Assists solo_Suicides solo_TeamKills solo_HeadshotKills solo_HeadshotKillRatio solo_VehicleDestroys solo_RoadKills solo_DailyKills solo_WeeklyKills solo_RoundMostKills 
+solo_MaxKillStreaks solo_WeaponAcquired solo_Days solo_LongestTimeSurvived solo_MostSurvivalTime solo_AvgSurvivalTime solo_WinPoints solo_WalkDistance
+ solo_RideDistance solo_MoveDistance solo_AvgWalkDistance solo_AvgRideDistance solo_LongestKill solo_Heals solo_Revives solo_Boosts solo_DamageDealt solo_DBNOs /dw dwProb stb vif;
+  OUTPUT OUT=reg_lungOUT  PREDICTED=c_predict   RESIDUAL=Res   L95M=C_l95m  U95M=C_u95m  L95=C_l95 U95=C_u95
+       rstudent=C_rstudent h=lev cookd=Cookd  dffits=dffit;
+run;
